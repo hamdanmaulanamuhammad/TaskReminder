@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SimpliRemind"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_marginTop="32dp" />
+
+    <!-- Garis horizontal -->
+    <View
+        android:id="@+id/view_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginTop="15dp" />
+
+    <!-- Container untuk detail task -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/container_setting"
+        android:padding="16dp"
+        android:layout_marginTop="30dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/tv_task_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tanggal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/calendar"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="04/18/2020"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Waktu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/group_1"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:00"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Repeat -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/vector__2_"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeated Once"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Tombol Add Task -->
+    <Button
+        android:id="@+id/btn_add_task"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/dark_blue"
+        android:text="Add Task"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_bold" />
+
+</LinearLayout>

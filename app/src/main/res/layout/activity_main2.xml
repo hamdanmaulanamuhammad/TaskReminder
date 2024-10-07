@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SimpliRemind"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_marginTop="32dp" />
+
+    <!-- Garis horizontal -->
+    <View
+        android:id="@+id/view_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginTop="15dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="30dp"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/tv_make_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Make your own reminder"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/make_own"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tv_title_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_insert_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp"
+                android:hint="Insert title" />
+
+            <TextView
+                android:id="@+id/tv_repeat_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Repeat"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/repeat">
+                <Spinner
+                    android:id="@+id/repeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_date_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Date"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_select_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/calendar"
+                android:drawablePadding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/repeat"
+                android:padding="10dp"
+                android:text="Select Date"
+                android:textSize="15sp"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tv_time_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Time"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_select_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/repeat"
+                android:padding="10dp"
+                android:text="Select Time"
+                android:textSize="15sp"
+                android:gravity="center_vertical" />
+
+            <Button
+                android:id="@+id/btn_add_task"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/light_blue"
+                android:text="Add Task"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
