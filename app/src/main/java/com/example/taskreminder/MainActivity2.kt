@@ -38,15 +38,16 @@ class MainActivity2 : AppCompatActivity() {
             }, year, month, day).show()
         }
 
-        // Time picker setup
-        binding.tvSelectTime.setOnClickListener {
+        // Time picker setup on TextView click
+        binding.timePicker.setOnClickListener {
             val calendar = Calendar.getInstance()
             val hour = calendar.get(Calendar.HOUR_OF_DAY)
             val minute = calendar.get(Calendar.MINUTE)
 
+            // Show TimePickerDialog
             TimePickerDialog(this, { _, selectedHour, selectedMinute ->
-                binding.tvSelectTime.text = String.format("%02d:%02d", selectedHour, selectedMinute)
-            }, hour, minute, true).show()
+                binding.timePicker.text = String.format("%02d:%02d", selectedHour, selectedMinute)
+            }, hour, minute, true).show()  // true for 24-hour format
         }
 
         // Add task button setup
@@ -59,7 +60,7 @@ class MainActivity2 : AppCompatActivity() {
         // Ambil data dari tampilan
         val title = binding.etInsertTitle.text.toString().trim()
         val date = binding.tvSelectDate.text.toString().trim()
-        val time = binding.tvSelectTime.text.toString().trim()
+        val time = binding.timePicker.text.toString().trim()  // Waktu dari TextView TimePicker
         val repeat = binding.repeat.selectedItem.toString().trim()
 
         // Cek apakah semua input sudah diisi

@@ -28,7 +28,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,18 +118,15 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/tv_select_time"
-                android:layout_width="match_parent"
+                android:id="@+id/time_picker"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:drawablePadding="8dp"
+                android:text="@string/underline_time"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppins_regular"
                 android:clickable="true"
-                android:focusable="true"
-                android:background="@drawable/repeat"
-                android:padding="10dp"
-                android:text="Select Time"
-                android:textSize="15sp"
-                android:gravity="center_vertical" />
+                android:textSize="35sp"/>
 
             <Button
                 android:id="@+id/btn_add_task"
